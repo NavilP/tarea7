@@ -1,0 +1,278 @@
+/*
+  Codigo con modificaciones para diseño responsive
+*/
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
+/*agregar un media query para el body
+y definir el tamaño de letra para el cuerpo
+font-size: 16px;*/
+@media (max-width: 500px) {
+  body {
+    font-size: 0.875em;
+  }
+}
+
+header nav {
+  padding: 1.25em;
+  color: white;
+  /*agregar un tamaño de fuente relativo*/
+  font-size: .875em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+header {
+  background-image: url("../img/header.jpg");
+  background-size:cover;
+  background-position: center;
+  height: 37.5em;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+}
+
+/*cambiar el tamaño del encabezado para dispositivos moviles*/
+@media (max-width: 500px) {
+  header {
+    height: 300px;
+    line-height: 1.2;
+  }
+}
+
+
+#logo{
+  /*font-size: 40px;*/
+  font-size: 2.5em;
+}
+
+/*
+   Para tablets
+   Se modifica el tamaño del logo, el padding y el margen derecho
+   Se modifica la propiedad display por flex de los links
+   Se mdifica el tamaño de letra de los links
+*/
+@media (max-width: 960px) {
+
+  #logo {
+    font-size: 2em;
+    max-width: 20vw;
+    padding-right: 1em;
+    margin-right: 1em;
+  }
+
+  #links {
+    display: flex;
+  }
+
+  #links a {
+    font-size: .8em;
+  }
+
+}
+
+/*
+   Para moviles
+   Se modifica el padding izquierdo
+   Se modifica el tamaño de letra del logo y el tamaño maximo
+*/
+@media (max-width: 500px) {
+  header nav {
+    padding-left: 1em;
+  }
+
+  #logo {
+    font-size: 1.8em;
+    max-width: 60vw;
+  }
+}
+
+
+#links{
+  font-size: 1.125em;
+}
+
+#links a {
+  margin: 0.938em;
+}
+
+a {
+  cursor: pointer;
+}
+
+a.button {
+  background-color: #a8a6a1;
+  padding: 0.625em 0.938em;
+  border: 0.125em solid #a8a6a1;
+  border-radius: 0.625em;
+}
+
+a.button:hover {
+  background-color: rgba(255,255,255,0.5);
+  color: white;
+}
+
+header h1 {
+  /* cambiar el tamaño de la fuente que sea relativo*/
+  text-align: center;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+header h1 em {
+  /*font-size: 20px;*/
+  font-size: 1.25em;
+  font-style: normal;
+  letter-spacing: 0.063em;
+}
+
+header h1 strong {
+  font-style: normal;
+  /*font-size: 68px;*/
+  font-size: 4.25em;
+  letter-spacing: 0.063em;
+}
+
+/*agregar un media querie*/
+@media (max-width: 500px) {
+  header h1 strong {
+    font-size: 2em;
+    letter-spacing: 4px;
+  }
+}
+
+header h1 a {
+  /*font-size: 18px;
+  cambiar el tamaño de la fuente*/
+  font-size: 0.9em;
+}
+
+section {
+  margin: 4.688em 16.25em;
+  text-align: center;
+}
+/*agregar un media query*/
+@media (max-width: 500px) {
+  section {
+    margin: 40px 10px;
+  }
+}
+
+@media (max-width: 960px) {
+  section {
+    margin: 10px 15px;
+  }
+}
+
+@media (max-width: 1328px) {
+  section {
+    margin: 10px 10px;
+  }
+}
+
+#main p {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 7.813em;
+  width: 70%;
+}
+
+#main h1 {
+  /*font-size: 38px;*/
+  font-size: 1.75em;
+}
+
+
+p {
+  /*line-height: 36px;*/
+   line-height: 2.25em;
+}
+
+footer {
+  background-color: rgb(45,45, 45);
+  color: rgba(255, 255, 255, .8);
+  padding: 2.188em;
+  text-align: center;
+}
+
+footer p {
+  color: rgba(255, 255, 255, .4);
+}
+
+address {
+  font-style: normal;
+}
+
+#details div {
+  /*  width: calc(50% - 10px);
+    margin: 50px 0;*/
+   flex-grow: 1;
+   padding: 1.25em;
+}
+
+#details {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+/*agregar un media query para organizar las imagenes
+como columnas y modificar la forma en que se calcula
+#details div*/
+@media (max-width: 500px) {
+  #details {
+    flex-direction: column;
+  }
+}
+
+#details img {
+  width: 100%;
+}
+
+#details h1 {
+  font-size: 2.375em;
+}
+
+#details div a.button {
+  color: white;
+}
+
+#details div a.button:hover {
+  background-color: rgba(0,0,0,0.1);
+  color: white;
+}
+
+/*crear un menu para moviles*/
+#menu {
+  display: none;
+}
+
+#menu div {
+  width: 1.563em;
+  height: 0.188em;
+  background-color: white;
+  margin: 0.313em 0;
+}
+
+@media (max-width: 500px) {
+  #links {
+    display: none;
+  }
+
+  #menu {
+    display: block;
+  }
+}
